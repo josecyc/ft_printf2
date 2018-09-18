@@ -6,7 +6,7 @@
 /*   By: jcruz-y- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 16:21:11 by jcruz-y-          #+#    #+#             */
-/*   Updated: 2018/09/17 19:11:30 by jcruz-y-         ###   ########.fr       */
+/*   Updated: 2018/09/18 14:13:55 by jcruz-y-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,13 +54,13 @@ void	ft_cases(char *fmt, va_list ap, int *count)
 				*(fmt + 1) == 'i') && fmt++)
 			ft_putnbr(va_arg(ap, int), count);
 		else if (*fmt == '%' && (*(fmt + 1) == 'o') && fmt++)
-			itoa_base(va_arg(ap, unsigned long), 8, count);
+			itoa_base(va_arg(ap, unsigned int), 8, count);
 		else if (*fmt == '%' && (*(fmt + 1) == 'p') && fmt++)
 			px_itoa_base(va_arg(ap, unsigned long), 16, count);
 		else if (*fmt == '%' && (*(fmt + 1) == 'u') && fmt++)
-			itoa_base(va_arg(ap, unsigned long), 10, count);
+			itoa_base(va_arg(ap, unsigned int), 10, count);
 		else if (*fmt == '%' && (*(fmt + 1) == 'x') && fmt++)
-			itoa_base(va_arg(ap, unsigned long), 16, count);
+			itoa_base(va_arg(ap, unsigned int), 16, count);
 		else if (*fmt == '%' && *(fmt + 1) == 'c' && fmt++)
 			ft_putchar(va_arg(ap, int), count);
 		else if (*fmt == '%' && *(fmt + 1) == '%' && fmt++)
